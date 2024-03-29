@@ -1,0 +1,409 @@
+('D:\\PycharmProjects\\pyqt5\\build\\main\\main.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True},
+ [('PYZ-00.pyz', 'D:\\PycharmProjects\\pyqt5\\build\\main\\PYZ-00.pyz', 'PYZ'),
+  ('struct',
+   'D:\\PycharmProjects\\pyqt5\\build\\main\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'D:\\PycharmProjects\\pyqt5\\build\\main\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'D:\\PycharmProjects\\pyqt5\\build\\main\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'D:\\PycharmProjects\\pyqt5\\build\\main\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'D:\\PycharmProjects\\pyqt5\\build\\main\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_pyqt5',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt5.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('main', 'D:\\PycharmProjects\\pyqt5\\main.py', 'PYSOURCE'),
+  ('python38.dll',
+   'd:\\program files (x86)\\python\\python38\\python38.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'd:\\program files (x86)\\python\\python38\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\opengl32sw.dll',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\libEGL.dll',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\libEGL.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\libGLESv2.dll',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\libGLESv2.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('_lzma.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('unicodedata.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('yaml\\_yaml.cp38-win_amd64.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\yaml\\_yaml.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('PyQt5\\QtWidgets.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\QtWidgets.pyd',
+   'EXTENSION'),
+  ('PyQt5\\QtGui.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\QtGui.pyd',
+   'EXTENSION'),
+  ('PyQt5\\sip.cp38-win_amd64.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\sip.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('PyQt5\\QtCore.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\QtCore.pyd',
+   'EXTENSION'),
+  ('simplejson\\_speedups.cp38-win_amd64.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\simplejson\\_speedups.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_cffi_backend.cp38-win_amd64.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\_cffi_backend.cp38-win_amd64.pyd',
+   'EXTENSION'),
+  ('cryptography\\hazmat\\bindings\\_openssl.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\_openssl.pyd',
+   'EXTENSION'),
+  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'EXTENSION'),
+  ('bcrypt\\_bcrypt.pyd',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\bcrypt\\_bcrypt.pyd',
+   'EXTENSION'),
+  ('PyQt5\\Qt5\\bin\\Qt5Core.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Gui.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Gui.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\MSVCP140.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'd:\\program files (x86)\\python\\python38\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Svg.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Svg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\VCRUNTIME140_1.dll',
+   'D:\\Program Files '
+   '(x86)\\Python\\Python38\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Quick.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Quick.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Network.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Network.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Widgets.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Widgets.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'd:\\program files (x86)\\python\\python38\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('python3.dll',
+   'd:\\program files (x86)\\python\\python38\\python3.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\MSVCP140_1.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140_1.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Qml.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Qml.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
+   'BINARY'),
+  ('field.yml', 'D:\\PycharmProjects\\pyqt5\\field.yml', 'DATA'),
+  ('read_api_field.py',
+   'D:\\PycharmProjects\\pyqt5\\read_api_field.py',
+   'DATA'),
+  ('base_library.zip',
+   'D:\\PycharmProjects\\pyqt5\\build\\main\\base_library.zip',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\METADATA',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\METADATA',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\LICENSE.APACHE',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\LICENSE.APACHE',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\INSTALLER',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\top_level.txt',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\WHEEL',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\WHEEL',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_da.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\LICENSE.BSD',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\LICENSE.BSD',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\LICENSE.PSF',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\LICENSE.PSF',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\RECORD',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\RECORD',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('cryptography-39.0.1.dist-info\\LICENSE',
+   'd:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\cryptography-39.0.1.dist-info\\LICENSE',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'D:\\program files '
+   '(x86)\\python\\python38\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'DATA')],
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

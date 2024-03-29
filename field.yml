@@ -1,0 +1,1375 @@
+Field:
+  form1:
+    [
+    {
+      "saveParam": {
+        "type": "text",
+        "name": "文本",
+        "key": "wenben",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "unique": false,
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "restrains": {
+          "max": "",
+          "min": "",
+          "universal": true,
+          "pattern": null,
+          "tip": ""
+        },
+        "sensitiveConfig": {
+          "sensitive": false,
+          "maskType": "all",
+          "customMask": "",
+          "maskCharacter": "*"
+        },
+        "textConfig": {
+          "textType": "normal"
+        },
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031209550388753442",
+          "2024031209550388846305",
+          "2024031209550388806710"
+        ],
+        "addToRelateListParam": {},
+        "version": 3
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "number",
+        "name": "数值",
+        "key": "shuzhi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "unique": false,
+        "showThousandFlag": false,
+        "unitPosition": "2",
+        "unit": "",
+        "restrains": {
+          "max": "",
+          "min": "",
+          "writeReadRatio": 1
+        },
+        "decimalFixedNum": 2,
+        "required": false,
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 3
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "singleSelect",
+        "name": "单选",
+        "key": "danxuan",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "optionCollectionId": 2,
+        "options": [
+        {
+          "name": "选项1",
+          "value": "选项1",
+          "style": {
+            "color": "#66CC00",
+            "background": "#F0FAE5"
+          }
+        },
+        {
+          "name": "选项2",
+          "value": "选项2",
+          "style": {
+            "color": "#007EFF",
+            "background": "#E5F2FF"
+          }
+        },
+        {
+          "name": "选项3",
+          "value": "选项3",
+          "style": {
+            "color": "#FF002B",
+            "background": "#FFE5EA"
+          }
+        },
+        {
+          "name": "选项4",
+          "value": "选项4",
+          "style": {
+            "color": "#FFA019",
+            "background": "#FFF7EB"
+          }
+        }
+        ],
+        "optionCollectionType": "custom",
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 4
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "multiplySelect",
+        "name": "多选",
+        "key": "duoxuan",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "optionCollectionId": 2,
+        "optionCollectionType": "custom",
+        "options": [
+        {
+          "name": "选项1",
+          "value": "选项1",
+          "style": {
+            "color": "#66CC00",
+            "background": "#F0FAE5"
+          }
+        },
+        {
+          "name": "选项2",
+          "value": "选项2",
+          "style": {
+            "color": "#007EFF",
+            "background": "#E5F2FF"
+          }
+        },
+        {
+          "name": "选项3",
+          "value": "选项3",
+          "style": {
+            "color": "#FF002B",
+            "background": "#FFE5EA"
+          }
+        },
+        {
+          "name": "选项4",
+          "value": "选项4",
+          "style": {
+            "color": "#FFA019",
+            "background": "#FFF7EB"
+          }
+        }
+        ],
+        "restrains": {
+          "max": "",
+          "min": ""
+        },
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "[]",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 5
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "date",
+        "name": "日期",
+        "key": "riqi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "dateConfig": {
+          "dynamicDateBegin": false,
+          "dynamicDateEnd": false,
+          "beginDate": null,
+          "endDate": null,
+          "dynamicTimeBegin": false,
+          "dynamicTimeEnd": false,
+          "beginTime": null,
+          "endTime": null,
+          "dateType": "date",
+          "beginDateType": "1",
+          "endDateType": "1",
+          "beginTimeType": "2",
+          "endTimeType": "4",
+          "beginDateNum": "",
+          "endDateNum": "",
+          "beginTimeNum": "",
+          "endTimeNum": "",
+          "dateSubType": "norm_date"
+        },
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "required": false,
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [],
+        "addToRelateListParam": {},
+        "version": 6
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "area",
+        "name": "地区",
+        "key": "diqu",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "required": false,
+        "areaConfig": {
+          "deep": "3",
+          "mustLast": false
+        },
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 7
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "photo",
+        "name": "图片",
+        "key": "tupian",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "restrains": {
+          "min": null,
+          "max": null
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "[]",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 8
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "attachments",
+        "name": "附件",
+        "key": "fujian",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "attachmentsConfig": {
+          "max": "",
+          "maxSize": ""
+        },
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 9
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "autoNumber",
+        "name": "自动编码",
+        "key": "zidongbianma",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "autoNumberConfig": {
+          "autoNumberRules": [
+          {
+            "type": "initValue",
+            "value": "1",
+            "autoReset": "no"
+          }
+          ]
+        },
+        "indexType": "none",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 10
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "positioning",
+        "name": "定位",
+        "key": "dingwei",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "required": false,
+        "positioningConfig": {
+          "rangeType": 0,
+          "range": null,
+          "fixedPositions": []
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031410531548175442",
+          "2024031410531548197310"
+        ],
+        "addToRelateListParam": {},
+        "version": 11
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "formula",
+        "name": "公式文本",
+        "key": "gongshiwenben",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "expression": " @@wenben__c@@ ",
+          "useExpression": true,
+          "selectSort": true,
+          "formulaFieldType": "text"
+        },
+        "showThousandFlag": false,
+        "unitPosition": "2",
+        "unit": "",
+        "decimalFixedNum": 2,
+        "dateConfig": {
+          "dateType": "date",
+          "dateSubType": "norm_date"
+        },
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 4
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "formula",
+        "name": "公式数值",
+        "key": "gongshishuzhi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "expression": " @@shuzhi__c@@ ",
+          "useExpression": true,
+          "selectSort": true,
+          "formulaFieldType": "number"
+        },
+        "showThousandFlag": true,
+        "unitPosition": "2",
+        "unit": "元",
+        "decimalFixedNum": 2,
+        "dateConfig": {
+          "dateType": "date",
+          "dateSubType": "norm_date"
+        },
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 6
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "formula",
+        "name": "公式日期",
+        "key": "gongshiriqi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "expression": " @@riqi__c@@ ",
+          "useExpression": true,
+          "selectSort": true,
+          "formulaFieldType": "date"
+        },
+        "showThousandFlag": false,
+        "unitPosition": "2",
+        "unit": "",
+        "decimalFixedNum": 2,
+        "dateConfig": {
+          "dateType": "date",
+          "dateSubType": "norm_date"
+        },
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 8
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "signature",
+        "name": "手写签名",
+        "key": "shouxieqianming",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 13
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "rich",
+        "name": "富文本",
+        "key": "fuwenben",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "addToPageIds": [
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 14
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    }
+    ]
+  form2:
+    [
+    {
+      "saveParam": {
+        "type": "text",
+        "name": "文本",
+        "key": "wenben",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "unique": false,
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "restrains": {
+          "max": "",
+          "min": "",
+          "universal": true,
+          "pattern": null,
+          "tip": ""
+        },
+        "sensitiveConfig": {
+          "sensitive": false,
+          "maskType": "all",
+          "customMask": "",
+          "maskCharacter": "*"
+        },
+        "textConfig": {
+          "textType": "normal"
+        },
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031209550388753442",
+          "2024031209550388846305",
+          "2024031209550388806710"
+        ],
+        "addToRelateListParam": {},
+        "version": 3
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "number",
+        "name": "数值",
+        "key": "shuzhi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "unique": false,
+        "showThousandFlag": false,
+        "unitPosition": "2",
+        "unit": "",
+        "restrains": {
+          "max": "",
+          "min": "",
+          "writeReadRatio": 1
+        },
+        "decimalFixedNum": 2,
+        "required": false,
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 3
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "singleSelect",
+        "name": "单选",
+        "key": "danxuan",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "optionCollectionId": 2,
+        "options": [
+        {
+          "name": "选项1",
+          "value": "选项1",
+          "style": {
+            "color": "#66CC00",
+            "background": "#F0FAE5"
+          }
+        },
+        {
+          "name": "选项2",
+          "value": "选项2",
+          "style": {
+            "color": "#007EFF",
+            "background": "#E5F2FF"
+          }
+        },
+        {
+          "name": "选项3",
+          "value": "选项3",
+          "style": {
+            "color": "#FF002B",
+            "background": "#FFE5EA"
+          }
+        },
+        {
+          "name": "选项4",
+          "value": "选项4",
+          "style": {
+            "color": "#FFA019",
+            "background": "#FFF7EB"
+          }
+        }
+        ],
+        "optionCollectionType": "custom",
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 4
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "multiplySelect",
+        "name": "多选",
+        "key": "duoxuan",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "optionCollectionId": 2,
+        "optionCollectionType": "custom",
+        "options": [
+        {
+          "name": "选项1",
+          "value": "选项1",
+          "style": {
+            "color": "#66CC00",
+            "background": "#F0FAE5"
+          }
+        },
+        {
+          "name": "选项2",
+          "value": "选项2",
+          "style": {
+            "color": "#007EFF",
+            "background": "#E5F2FF"
+          }
+        },
+        {
+          "name": "选项3",
+          "value": "选项3",
+          "style": {
+            "color": "#FF002B",
+            "background": "#FFE5EA"
+          }
+        },
+        {
+          "name": "选项4",
+          "value": "选项4",
+          "style": {
+            "color": "#FFA019",
+            "background": "#FFF7EB"
+          }
+        }
+        ],
+        "restrains": {
+          "max": "",
+          "min": ""
+        },
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "[]",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 5
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "date",
+        "name": "日期",
+        "key": "riqi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "dateConfig": {
+          "dynamicDateBegin": false,
+          "dynamicDateEnd": false,
+          "beginDate": null,
+          "endDate": null,
+          "dynamicTimeBegin": false,
+          "dynamicTimeEnd": false,
+          "beginTime": null,
+          "endTime": null,
+          "dateType": "date",
+          "beginDateType": "1",
+          "endDateType": "1",
+          "beginTimeType": "2",
+          "endTimeType": "4",
+          "beginDateNum": "",
+          "endDateNum": "",
+          "beginTimeNum": "",
+          "endTimeNum": "",
+          "dateSubType": "norm_date"
+        },
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "required": false,
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [],
+        "addToRelateListParam": {},
+        "version": 6
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "area",
+        "name": "地区",
+        "key": "diqu",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "required": false,
+        "areaConfig": {
+          "deep": "3",
+          "mustLast": false
+        },
+        "indexType": "none",
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 7
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "photo",
+        "name": "图片",
+        "key": "tupian",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "restrains": {
+          "min": null,
+          "max": null
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "[]",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 8
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "attachments",
+        "name": "附件",
+        "key": "fujian",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "attachmentsConfig": {
+          "max": "",
+          "maxSize": ""
+        },
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 9
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "autoNumber",
+        "name": "自动编码",
+        "key": "zidongbianma",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "autoNumberConfig": {
+          "autoNumberRules": [
+          {
+            "type": "initValue",
+            "value": "1",
+            "autoReset": "no"
+          }
+          ]
+        },
+        "indexType": "none",
+        "addToPageIds": [
+          "2024031210325485901572",
+          "2024031210325485993698",
+          "2024031210325485915351"
+        ],
+        "addToRelateListParam": {},
+        "version": 10
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "positioning",
+        "name": "定位",
+        "key": "dingwei",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "required": false,
+        "positioningConfig": {
+          "rangeType": 0,
+          "range": null,
+          "fixedPositions": []
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "",
+        "addToPageIds": [
+          "2024031410531548175442",
+          "2024031410531548197310"
+        ],
+        "addToRelateListParam": {},
+        "version": 11
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+
+    {
+      "saveParam": {
+        "type": "formula",
+        "name": "公式文本",
+        "key": "gongshiwenben",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "expression": " @@wenben__c@@ ",
+          "useExpression": true,
+          "selectSort": true,
+          "formulaFieldType": "text"
+        },
+        "showThousandFlag": false,
+        "unitPosition": "2",
+        "unit": "",
+        "decimalFixedNum": 2,
+        "dateConfig": {
+          "dateType": "date",
+          "dateSubType": "norm_date"
+        },
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 4
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "formula",
+        "name": "公式数值",
+        "key": "gongshishuzhi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "expression": " @@shuzhi__c@@ ",
+          "useExpression": true,
+          "selectSort": true,
+          "formulaFieldType": "number"
+        },
+        "showThousandFlag": true,
+        "unitPosition": "2",
+        "unit": "元",
+        "decimalFixedNum": 2,
+        "dateConfig": {
+          "dateType": "date",
+          "dateSubType": "norm_date"
+        },
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 6
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "formula",
+        "name": "公式日期",
+        "key": "gongshiriqi",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "formula": {
+          "expression": " @@riqi__c@@ ",
+          "useExpression": true,
+          "selectSort": true,
+          "formulaFieldType": "date"
+        },
+        "showThousandFlag": false,
+        "unitPosition": "2",
+        "unit": "",
+        "decimalFixedNum": 2,
+        "dateConfig": {
+          "dateType": "date",
+          "dateSubType": "norm_date"
+        },
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 8
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "signature",
+        "name": "手写签名",
+        "key": "shouxieqianming",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "addToPageIds": [
+          "2024032017290144797478",
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 13
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "rich",
+        "name": "富文本",
+        "key": "fuwenben",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "addToPageIds": [
+          "2024032017290144740451",
+          "2024032017290144735798"
+        ],
+        "addToRelateListParam": {},
+        "version": 14
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "associationForm",
+        "name": "查找",
+        "key": "chazhao",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "useFormId": 107701,
+        "associateConfig": {
+          "enableVirtualField": true,
+          "multiply": false,
+          "max": "",
+          "queryFieldsFilter": [],
+          "formulaConfig": "",
+          "triggerCondition": [],
+          "dataShowType": "select",
+          "showType": 1,
+          "relationFieldName": "相关列表"
+        },
+        "required": false,
+        "indexType": "normal",
+        "formula": {
+          "useExpression": false,
+          "expression": ""
+        },
+        "dynamicDefaultValue": false,
+        "defaultValue": "[]",
+        "addToPageIds": [
+          "2024032011402953051618",
+          "2024032011402953090522",
+          "2024032011402953033555"
+        ],
+        "addToRelateListParam": {
+        },
+        "version": 13
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "masterDetail",
+        "name": "主详",
+        "key": "zhuxiang",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "required": false,
+        "useFormId": 107713,
+        "associateConfig": {
+          "enableVirtualField": true,
+          "relationFieldName": "子表字段"
+        },
+        "addToPageIds": [
+          "2024032016070468535261",
+          "2024032016070468556116",
+          "2024032016070468593425"
+        ],
+        "addToRelateListParam": {
+          "addToPageIds": [
+            "2024032016070508642623",
+            "2024032016070508638822"
+          ]
+        },
+        "version": 12
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    }
+
+    ]
