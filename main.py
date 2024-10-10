@@ -1,10 +1,10 @@
 import logging
+import string
 import sys
 import requests
-from PyQt5.QtCore import Qt
-
+from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QLineEdit, QLabel, \
-    QHBoxLayout, QCheckBox
+    QCheckBox, QComboBox, QProgressDialog
 
 from read_api_field import read_field
 
@@ -19,81 +19,91 @@ class FieldCreationTool(QWidget):
         self.form_id = None
         self.form1_code = None
         self.form2_code = None
+
         self.init_ui()
+        self.update_app_id()  # 初始化时获取令牌并保存
 
     def init_ui(self):
-        # 创建输入框和标签
+        # 创建一个垂直布局
+        layout = QVBoxLayout(self)
+
+        # 创建一个标签和下拉框，用于选择环境
+        self.env_label = QLabel('选择环境', self)
+        self.env_select = QComboBox(self)
+        self.env_select.addItems(["测试环境", "生产环境"])
+        self.env_select.currentIndexChanged.connect(self.update_app_id)
+
+        # 创建一个标签和输入框，用于输入对象名称1
         self.field_name_label = QLabel('请输入对象名称1', self)
         self.field_name_input = QLineEdit(self)
-        self.field_name_input.setFixedHeight(30)  # 设置高度为30
 
-        # 添加输入框和标签用于输入appId
+        # 创建一个标签和输入框，用于输入App ID
         self.app_id_label = QLabel('请输入App ID', self)
         self.app_id_input = QLineEdit(self)
-        self.app_id_input.setText('51518')  # 设置默认值为51518
-        self.app_id_input.setFixedHeight(30)
+        self.app_id_input.setText('51518')
 
-        # 创建勾选框
+        # 创建一个复选框，用于控制第二个对象输入框是否显示
         self.show_object_checkbox = QCheckBox('显示第二个对象输入框', self)
         self.show_object_checkbox.stateChanged.connect(self.show_object_input)
 
-        # 创建对象输入框和标签
-        self.object_name_label = QLabel('请输入对象名称2', self)
+        # 创建第二个对象名称标签和输入框
+        self.object_name_label = QLabel('请输入对象1的子对象名称', self)
         self.object_name_input = QLineEdit(self)
-        self.object_name_input.setFixedHeight(30)
 
-        # 创建水平布局来放置对象输入框和标签
-        object_layout = QHBoxLayout()
-        object_layout.addWidget(self.object_name_label)
-        object_layout.addWidget(self.object_name_input)
+        # 将所有控件添加到布局中
+        layout.addWidget(self.env_label)
+        layout.addWidget(self.env_select)
+        layout.addWidget(self.field_name_label)
+        layout.addWidget(self.field_name_input)
+        layout.addWidget(self.app_id_label)
+        layout.addWidget(self.app_id_input)
+        layout.addWidget(self.show_object_checkbox)
+        layout.addWidget(self.object_name_label)
+        layout.addWidget(self.object_name_input)
 
-        # 隐藏对象输入框
+        # 隐藏第二个对象名称标签和输入框
         self.object_name_label.setVisible(False)
         self.object_name_input.setVisible(False)
 
-        # 将标签和输入框放在水平布局中
-        input_layout = QHBoxLayout()
-        input_layout.addWidget(self.field_name_label)
-        input_layout.addWidget(self.field_name_input)
-
-        # 将标签和输入框放在水平布局中
-        app_id_layout = QHBoxLayout()
-        app_id_layout.addWidget(self.app_id_label)
-        app_id_layout.addWidget(self.app_id_input)
-
-        # 创建垂直布局
-        layout = QVBoxLayout(self)
-        layout.addLayout(input_layout)
-        layout.addLayout(app_id_layout)
-        layout.addWidget(self.show_object_checkbox)
-        layout.addLayout(object_layout)  # 添加对象输入框的水平布局
-        # layout.addWidget(self.object_name_label)  # 不再需要单独添加标签
-        # layout.addWidget(self.object_name_input)  # 不再需要单独添加输入框
-
-        # 创建按钮
+        # 创建一个按钮，用于创建对象
         btn_create_form = QPushButton('创建对象', self)
         btn_create_form.clicked.connect(self.create_form)
-        btn_create_form.setFixedHeight(30)
         layout.addWidget(btn_create_form)
 
+        # 设置窗口布局
         self.setLayout(layout)
 
-        # 设置窗口
+        # 设置窗口大小和标题
         self.setGeometry(500, 500, 500, 250)
         self.setWindowTitle('Field Creation Tool')
+
+        # 显示窗口
         self.show()
 
-    def show_object_input(self, state):
-        if state == Qt.Checked:
-            self.object_name_label.setVisible(True)
-            self.object_name_input.setVisible(True)
+    def update_app_id(self):
+        env = self.env_select.currentText()
+        if env == "测试环境":
+            self.app_id_input.setText('51518')
+        elif env == "生产环境":
+            self.app_id_input.setText('51496')
+        self.x_user_token = self.get_headers_with_token()  # 切换环境时重新获取令牌
+
+    def get_base_url(self):
+        env = self.env_select.currentText()
+        if env == "测试环境":
+            return "http://developers.test2.youxin.plus"
+        elif env == "生产环境":
+            return "http://developers.pre.youxin.plus"
         else:
-            self.object_name_label.setVisible(False)
-            self.object_name_input.setVisible(False)
+            return "http://developers.test2.youxin.plus"
+
+    def show_object_input(self, state):
+        self.object_name_label.setVisible(state == Qt.Checked)
+        self.object_name_input.setVisible(state == Qt.Checked)
 
     def send_sms(self):
         # 发送短信验证码的接口
-        sms_api_url = "http://developers.test2.youxin.plus/api-login/sms/preview-login"
+        sms_api_url = f"{self.get_base_url()}/api-login/sms/preview-login"
         sms_payload = {
             "phone": "13631276041",
             "code": "123569",
@@ -114,13 +124,13 @@ class FieldCreationTool(QWidget):
             QMessageBox.critical(self, '错误', f'验证码发送失败：{err}')
             return None
 
+    # 登录获取 token
     def get_headers_with_token(self):
-        # 登录获取 token
         preview_token = self.send_sms()
         if preview_token is None:
             return None
         if preview_token:
-            login_url = "http://developers.test2.youxin.plus/api-login/login"
+            login_url = f"{self.get_base_url()}/api-login/login"
             login_payload = {
                 "companyId": 666,
                 "token": preview_token
@@ -136,54 +146,65 @@ class FieldCreationTool(QWidget):
                     QMessageBox.critical(self, '错误', '无法获取登录 token！')
                     return None
 
-                headers = {
-                    "Content-Type": "application/json;charset=UTF-8",
-                    "Cookie": "_bl_uid=qdlFeiX0y1FdXe1wkg6I5sd6n8da",
-                    "X-User-Token": x_user_token,  # 使用获取的登录 token
-                    "X-Expend-Log-App-Id": self.app_id_input.text()
-                }
-
-                return headers
+                return x_user_token
 
             except requests.exceptions.RequestException as err:
                 QMessageBox.critical(self, '错误', f'登录失败：{err}')
                 return None
 
+    def get_headers(self):
+        headers = {
+            "Content-Type": "application/json;charset=UTF-8",
+            "Cookie": "_bl_uid=qdlFeiX0y1FdXe1wkg6I5sd6n8da",
+            "X-User-Token": self.x_user_token,  # 使用获取的登录 token
+            "X-Expend-Log-App-Id": self.app_id_input.text()
+        }
+        return headers
+
+    # 创建对象接口
     def create_form(self):
+        # 创建进度对话框
+        progress_dialog = QProgressDialog("创建对象中...", "取消", 0, 100, self)
+        progress_dialog.setWindowModality(Qt.WindowModal)
+        progress_dialog.setMinimumDuration(0)
+        progress_dialog.setValue(0)
+
+        def update_progress(value):
+            progress_dialog.setValue(value)
+            if value >= 100:
+                progress_dialog.close()
+
+        # 异步执行创建对象的过程
+        QTimer.singleShot(100, lambda: self._create_form(update_progress))
+
+    def _create_form(self, update_progress):
         # 检查第一个对象输入框是否有值
         if not self.field_name_input.text():
             QMessageBox.critical(self, '错误', '请输入对象1名称')
             return
-
-        # 获取用户输入的 fieldName 参数
-        field_name = self.field_name_input.text()
-        headers = self.get_headers_with_token()
-        if headers is None:
-            return
-
         # 检查字段名和App ID是否为空
         if not self.app_id_input.text():
             QMessageBox.critical(self, '错误', '请输入App ID')
             return
-
-        # 每次创建对象都重新获取默认表单编码
-        default_form_code = self.get_default_form_code()
-        if default_form_code is None:
-            QMessageBox.critical(self, '错误', '无法获取默认表单编码')
-            return
-
-        # 在此处添加触发创建表单接口的代码
-        api_url = "http://developers.test2.youxin.plus/api-meta/form/save"
-
-        # 创建成功和失败的对象列表
-        success_objects = []
-        failed_objects = []
-
-        # 创建第一个对象
-        form1_params = {
+        # 获取用户输入的 fieldName 参数
+        field_name = self.field_name_input.text()
+        form_params = [{
             "type": "base",
             "name": field_name,
-            "formCode": default_form_code,
+            "formCode": "formCode1",
+            "desc": "",
+            "titleField": {
+                "fieldName": "名称",
+                "fieldKey": "Name",
+                "type": "text"
+            },
+            "appId": self.app_id_input.text()
+        }]
+        object_name = self.object_name_input.text()
+        form2_param = {
+            "type": "base",
+            "name": object_name,
+            "formCode": "form_code2",
             "desc": "",
             "titleField": {
                 "fieldName": "名称",
@@ -192,81 +213,43 @@ class FieldCreationTool(QWidget):
             },
             "appId": self.app_id_input.text()
         }
-
-        try:
-            # 创建第一个对象
-            response1 = requests.post(url=api_url, json=form1_params, headers=headers)
-            response1.raise_for_status()
-            data1 = response1.json()
-            self.form1_code = data1.get("data").get("formCode")
-            self.form_id = data1.get("data").get("id")
-            logger.info(f'创建的对象1名称：{self.form1_code}')  # 添加日志记录
-            success_objects.append(field_name)
-            # 在此处调用创建字段的接口，传递 form_code 参数
-
-
-        except requests.exceptions.RequestException as err:
-            QMessageBox.critical(self, '错误', f'表单1创建失败：{err}')
-            failed_objects.append(field_name)
-
-        # 如果对象输入框2有值，则创建第二个对象
-        object_name = self.object_name_input.text()
         # 第二个对象框不隐藏且有值才创建
         if self.object_name_input.isVisible() and object_name:
+            form_params.append(form2_param)
+        api_url = f"{self.get_base_url()}/api-meta/form/save"
+        # 创建成功和失败的对象列表
+        result_message = []
+        progress = 0
+        for param in form_params:
             try:
-                # 创建第二个对象时重新获取默认表单编码
-                default_form_code = self.get_default_form_code()
-                if default_form_code is None:
-                    QMessageBox.critical(self, '错误', '无法获取默认表单编码')
-                    return
-
-                # 创建第二个对象
-                form2_params = {
-                    "type": "base",
-                    "name": object_name,
-                    "formCode": default_form_code,
-                    "desc": "",
-                    "titleField": {
-                        "fieldName": "名称",
-                        "fieldKey": "Name",
-                        "type": "text"
-                    },
-                    "appId": self.app_id_input.text()
-                }
-
-                # 创建第二个对象
-                response2 = requests.post(url=api_url, json=form2_params, headers=headers)
+                param['formCode'] = self.get_default_form_code()
+                logger.info(f"创建对象的参数{param}")
+                response2 = requests.post(url=api_url, json=param, headers=self.get_headers())
                 response2.raise_for_status()
                 data2 = response2.json()
-                self.form2_code = data2.get("data").get("formCode")
-                logger.info(f'创建的对象2名称：{self.form2_code}')  # 添加日志记录
-                success_objects.append(object_name)
-
-                # 在此处调用其他接口，传递 form_code 参数
-
-
+                self.form_code = data2.get("data").get("formCode")
+                logger.info(f'创建的对象名称：{self.form_code}')
+                if form_params.index(param) == 0:
+                    message = self.create_field(self.form_code, self.field_name_input.text(), read_field()['form1'])
+                else:
+                    message = self.create_field(self.form_code, self.object_name_input.text(), read_field()['form2'])
+                result_message.append(message)
             except requests.exceptions.RequestException as err:
-                QMessageBox.critical(self, '错误', f'表单2创建失败：{err}')
-                failed_objects.append(object_name)
+                QMessageBox.critical(self, '错误', f'对象创建失败：{err}')
 
-        if success_objects:
-            # QMessageBox.information(self, '成功', f'成功创建对象: {", ".join(success_objects)}')
-            self.create_field(self.form1_code, self.field_name_input.text(), read_field()['form1'])  # 创建第1个对象的字段
-            if self.object_name_input.isVisible() and object_name:
-                pids = self.get_page_id(self.form1_code, ['add', 'detail'])
-                self.create_field(self.form2_code, self.object_name_input.text(), read_field()['form2'], useFormId=self.form_id,
-                                  addToRelateListParam={"addToPageIds": pids})  # 创建第2个对象的字段
+            # 更新进度条
+            progress += int(100 / len(form_params))
+            update_progress(progress)
 
+        messages = '\n'.join(result_message)
+        update_progress(100)
+        QMessageBox.information(self, '', messages)
 
-
+    # 获取对象id的接口,用户创建对象时传参
     def get_default_form_code(self):
-        # 获取默认表单编码的接口
-        headers = self.get_headers_with_token()
-        if headers is None:
-            return
-        api_url = "http://developers.test2.youxin.plus/api-meta/form-info/getDefaultCode"
+        api_url = f"{self.get_base_url()}/api-meta/form-info/getDefaultCode"
         try:
-            response = requests.get(url=api_url, headers=headers)
+            response = requests.get(url=api_url, headers=self.get_headers())
             response.raise_for_status()
             data = response.json()
             default_form_code = data.get('data')
@@ -275,15 +258,15 @@ class FieldCreationTool(QWidget):
             QMessageBox.critical(self, '错误', f'无法获取默认表单编码：{err}')
             return None
 
+    # 获取对象布局的接口，用于字段加到布局里和二维码字段
     def get_page_id(self, form_code, type=None):
-        headers = self.get_headers_with_token()
-        page_url = f"http://developers.test2.youxin.plus/api-meta/form/layout/{form_code}/list?page=1&num=100"
+        page_url = f"{self.get_base_url()}/api-meta/form/layout/{form_code}/list?page=1&num=100"
         if type:
             if isinstance(type, str):
                 type = [type]
             page_url += f"&type={'&'.join(type)}"
         try:
-            response = requests.get(url=page_url, headers=headers)
+            response = requests.get(url=page_url, headers=self.get_headers())
             response.raise_for_status()
             data = response.json().get('data')
             page_id = [page['pageId'] for page in data]
@@ -292,65 +275,98 @@ class FieldCreationTool(QWidget):
             QMessageBox.critical(self, '错误', f'无法获取pageId：{err}')
             return None
 
-    def create_field(self, form_code,form_name, payloads, **kwargs):
-        headers = self.get_headers_with_token()
-        if headers is None:
-            return
+    # 创建对象字段的接口
+    def create_field(self, form_code, form_name, payloads):
         success_fields = []
         failed_fields = []
-        # 在此处添加触发创建字段接口的代码
+        base_url = self.get_base_url()
+
+        logger.info(f"开始创建字段 - 对象id: {form_code}, 对象名称: {form_name}")
+
         for payload in payloads:
-            api_url = f"http://developers.test2.youxin.plus/api-meta/field-info/save/{form_code}"
-            version = self.get_api_version(form_code)  # 获取版本号
-            logger.info(f'获取的version: {version}')
-            if payload['saveParam']['type'] in ['rich', 'qrCode']:
-                pageIds = self.get_page_id(form_code, 'add,detail')  # 获取布局id
+            field_type = payload['saveParam'].get('type')
+            # 跳过summary字段创建如果第二个对象框没有显示
+            if field_type == 'summary' and not self.object_name_input.isVisible():
+                logger.info("第二个对象框未显示，跳过创建summary字段")
+                continue
+
+            api_url = f"{base_url}/api-meta/field-info/save/{form_code}"
+            version = self.get_api_version(form_code)
+            logger.info(f"获取的字段版本号: {version}")
+
+            if field_type in ['rich', 'qrCode']:
+                pageIds = self.get_page_id(form_code, 'layout')
             else:
-                pageIds = self.get_page_id(form_code)  # 获取布局id
-            # 检查是否成功获取版本号
+                pageIds = self.get_page_id(form_code)
+
             if version is not None:
-                # 更新字段的version和addToPageIds
                 payload['saveParam'].update(version=version, addToPageIds=pageIds)
-                # 判断只有查找和主项才更新addToRelateListParam属性
-                if payload['saveParam']['type'] in ['associationForm', 'masterDetail']:
-                    payload['saveParam'].update(kwargs)
+
+                if field_type in ['associationForm', 'masterDetail']:
+                    addToRelateListParam = {"addToPageIds": self.get_page_id(form_code, 'layout')}
+                    payload['saveParam'].update(useFormId=self.form_id, addToRelateListParam=addToRelateListParam)
+                elif field_type == 'qrCode':
+                    qrCodeConfig = {
+                        "source": "system",
+                        "nativeForm": True,
+                        "formCode": form_code,
+                        "pageType": "layout",
+                        "pageCode": self.get_page_id(form_code, 'layout')[0],
+                        "customData": "",
+                        "queryFieldsFilter": [],
+                        "redirectParams": [],
+                        "validTime": 0,
+                        "refreshPeriod": None
+                    }
+                    payload['saveParam'].update(qrCodeConfig=qrCodeConfig)
+                elif self.object_name_input.isVisible() and self.object_name_input.text() and field_type == 'summary':
+                    summaryInfo = {
+                        "summaryFieldAccessPath": f"zhuxiang__c_{self.form2_code}",
+                        "summaryFunction": "SUM",
+                        "fieldName": "shuzhi__c"
+                    }
+                    payload['saveParam'].update(summaryInfo=summaryInfo)
 
                 try:
-                    field_name = payload['saveParam']['name']  # 字段名称
-                    logger.info(f'{field_name}字段传参: {payload}')
-                    response = requests.post(url=api_url, json=payload, headers=headers)
+                    field_name = payload['saveParam']['name']
+                    logger.info(f"创建 {field_type} 字段请求参数: {payload}")
+                    response = requests.post(url=api_url, json=payload, headers=self.get_headers())
                     response.raise_for_status()
                     success_fields.append(payload['saveParam']["name"])
-                    logger.info(f'创建字段按的结果: {response.json()}')
+                    logger.info(f"创建字段成功: {field_name}, 返回结果: {response.json()}")
                 except requests.exceptions.RequestException as err:
                     failed_fields.append((payload['saveParam']["name"], str(err)))
+                    logger.error(f"创建字段失败: {payload['saveParam']['name']}, 错误: {err}")
             else:
+                logger.error("无法获取版本号！")
                 QMessageBox.critical(self, '错误', '无法获取版本号！')
 
-        success_message = f'{form_name} 对象 创建字段: {", ".join(success_fields)}' if success_fields else ''
+        success_message = f'{form_name} 对象 创建字段: {", ".join(success_fields)}。' if success_fields else ''
         failed_message = f'创建失败字段: {", ".join([f"{name} ({error})" for name, error in failed_fields])}' if failed_fields else ''
 
         if success_message:
-            QMessageBox.information(self, '成功', success_message)
+            logger.info(f"成功消息: {success_message}")
+            return success_message
 
         if failed_message:
-            QMessageBox.critical(self, '错误', failed_message)
+            logger.error(f"失败消息: {failed_message}")
+            return failed_message
 
+    # 获取字段版本号的接口
     def get_api_version(self, form_code):
-        api_url = f"http://developers.test2.youxin.plus/api-meta/form/{form_code}"
+        api_url = f"{self.get_base_url()}/api-meta/form/{form_code}"
         payload = {}
-        headers = self.get_headers_with_token()
-
         try:
-            response = requests.post(api_url, json=payload, headers=headers)
+            response = requests.post(api_url, json=payload, headers=self.get_headers())
             response.raise_for_status()
             data = response.json()
             version = data.get('data', {}).get('version')
             return version
-
         except requests.exceptions.RequestException as err:
             QMessageBox.critical(self, '错误', f'无法获取版本号：{err}')
             return None
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     field_tool = FieldCreationTool()

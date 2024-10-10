@@ -641,6 +641,78 @@ Field:
         "allowCreateRoleIds": [],
         "allowExportRoleIds": []
       }
+    },
+    {
+      "saveParam": {
+        "type": "qrCode",
+        "name": "二维码",
+        "key": "erweima",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "qrCodeConfig": {
+          "source": "system",
+          "nativeForm": true,
+          "formCode": "yxpm__CustomObject0863__c",
+          "pageType": "detail",
+          "pageCode": "2024032017332286583753",
+          "customData": "",
+          "redirectParams": [],
+          "queryFieldsFilter": [],
+          "validTime": 0
+        },
+        "addToPageIds": [
+          "2024032017332286444167",
+          "2024032017332286583753"
+        ],
+        "addToRelateListParam": {},
+        "version": 13
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "summary",
+        "name": "汇总",
+        "key": "huizong",
+        "desc": "保存字段时，计算此字段。",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": true,
+        "showSubtitle": false,
+        "desc2": "",
+        "summaryInfo": {
+          "summaryFieldAccessPath": "zhuxiang__c_yxpm__CustomObject0968__c",
+          "summaryFunction": "SUM",
+          "fieldName": "shuzhi__c"
+        },
+        "showThousandFlag": true,
+        "unitPosition": "2",
+        "unit": "元",
+        "decimalFixedNum": 2,
+        "required": false,
+        "addToPageIds": [
+          "2024040717042236284547",
+          "2024040717042236205475",
+          "2024040717042236204438"
+        ],
+        "addToRelateListParam": {},
+        "version": 20
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
     }
     ]
   form2:
@@ -1279,6 +1351,42 @@ Field:
         ],
         "addToRelateListParam": {},
         "version": 14
+      },
+      "roleFieldPermissions": {
+        "allowReadRoleIds": [],
+        "allowEditRoleIds": [],
+        "allowCreateRoleIds": [],
+        "allowExportRoleIds": []
+      }
+    },
+    {
+      "saveParam": {
+        "type": "qrCode",
+        "name": "二维码",
+        "key": "erweima",
+        "desc": "",
+        "placeholder": "",
+        "subtitle": "",
+        "showIconDesc": false,
+        "showSubtitle": false,
+        "desc2": "",
+        "qrCodeConfig": {
+          "source": "system",
+          "nativeForm": true,
+          "formCode": "yxpm__CustomObject0863__c",
+          "pageType": "detail",
+          "pageCode": "2024032017332286583753",
+          "customData": "",
+          "redirectParams": [],
+          "queryFieldsFilter": [],
+          "validTime": 0
+        },
+        "addToPageIds": [
+          "2024032017332286444167",
+          "2024032017332286583753"
+        ],
+        "addToRelateListParam": {},
+        "version": 13
       },
       "roleFieldPermissions": {
         "allowReadRoleIds": [],

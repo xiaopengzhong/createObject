@@ -19,6 +19,6 @@ def package_pyqt5_project(project_path, project_name):
 if __name__ =='__main__':
     # 替换为您的项目路径和项目名称的绝对路径
     project_path = os.path.dirname(os.path.abspath(__file__))
-    project_name = 'YourAppName'
+    project_name = 'main'
     # 执行打包操作
     package_pyqt5_project(project_path, project_name)
